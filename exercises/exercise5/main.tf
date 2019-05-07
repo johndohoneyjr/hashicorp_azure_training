@@ -77,7 +77,7 @@ data "template_file" "setup" {
 
 # Service Principal Module
 module "vaultapp" {
-  source             = "./modules/service_principal"
+  source             = "./modules/service-principal"
   resource_group     = "${azurerm_resource_group.main.id}"
   location           = "${azurerm_resource_group.main.location}"
   project_name       = "${random_id.project_name.hex}"
