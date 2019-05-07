@@ -76,6 +76,7 @@ data "template_file" "setup" {
 }
 
 # Service Principal Module
+/*
 module "vaultapp" {
   source             = "./modules/service-principal"
   resource_group     = "${azurerm_resource_group.main.id}"
@@ -84,3 +85,4 @@ module "vaultapp" {
   subscription_id    = "${data.azurerm_client_config.current.subscription_id}"
   role_definition_id = "${data.azurerm_role_definition.role_definition.id}"
 }
+*/
