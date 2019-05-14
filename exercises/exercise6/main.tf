@@ -10,11 +10,6 @@ resource "random_id" "client_secret" {
   byte_length = 32
 }
 
-# generate sql password
-resource "random_id" "sql_password" {
-  byte_length = 32
-}
-
 # Local for tag to attach to all items
 locals {
   tags = "${merge(var.tags, map("ProjectName", random_id.project_name.hex))}"
@@ -83,7 +78,7 @@ data "template_file" "setup" {
 # Service Principal Module
 /*
 module "vaultapp" {
-  source             = "./modules/service_principal"
+  source             = "./modules/service-principal"
   resource_group     = "${azurerm_resource_group.main.id}"
   location           = "${azurerm_resource_group.main.location}"
   project_name       = "${random_id.project_name.hex}"
