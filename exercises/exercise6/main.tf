@@ -10,6 +10,11 @@ resource "random_id" "client_secret" {
   byte_length = 32
 }
 
+# generate sql password
+resource "random_id" "sql_password" {
+  byte_length = 32
+}
+
 # Local for tag to attach to all items
 locals {
   tags = "${merge(var.tags, map("ProjectName", random_id.project_name.hex))}"
