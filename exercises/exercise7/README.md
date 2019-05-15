@@ -54,3 +54,4 @@ Use sentinel to provide Policy as Code for Terraform
 * Create a Sentinel Policy Set for just the current workspace and configure the policy to use that policy set
 
 https://www.terraform.io/docs/enterprise/sentinel/index.html  
+
