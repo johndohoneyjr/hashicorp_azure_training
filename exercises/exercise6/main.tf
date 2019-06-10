@@ -100,7 +100,7 @@ resource "azurerm_virtual_machine" "main" {
   vm_size                       = "Standard_A2_v2"
   delete_os_disk_on_termination = true
 
-  identity = {
+  identity {
     type = "SystemAssigned"
   }
 
